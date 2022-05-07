@@ -28,7 +28,7 @@
                     </div>
                 </div>
 
-                <div class="row mb-3">
+                {{-- <div class="row mb-3">
                     <label for="email" class="col-md-4 col-form-label text-md-end"><span class="badge bg-dark">{{ __('Correo') }}</span></label>
 
                     <div class="col-md-6">
@@ -41,7 +41,7 @@
                         @enderror
                     </div>
                 </div>
-
+ --}}
                 <div class="row mb-3">
                     <label for="password" class="col-md-4 col-form-label text-md-end"><span class="badge bg-dark">{{ __('Password') }}</span></label>
 
@@ -53,6 +53,40 @@
                                 <strong>{{ $message }}</strong>
                             </span>
                         @enderror
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <label for="txtDui" class="col-md-4 col-form-label text-md-right">{{ __('txtDui') }}</label>
+                    <div class="col-md-6">
+                    <input id="txtDui" name="txtDui" placeholder="Ingrese dui" type="text" class="form-control" @error('txtDui') is-invalid @enderror value="{{old('txtDui')}}" required="required">
+                    @error('txtDui')
+                        <span class="invalid-feedback d-block" role="alert">
+                            <strong>{{ $message }}</strong>
+                        </span>
+                    @enderror
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('txtDescripcion') }}</label>
+                    <div class="col-md-6">
+                    <textarea id="txtDireccion" name="txtDireccion" cols="40" rows="2" class="form-control" @error('txtDireccion') is-invalid @enderror value="{{old('txtDireccion')}}" required="required"></textarea>
+                    @error('txtDireccion')
+                        <span class="invalid-feedback d-block" role="alert">
+                            <strong>{{ $message }}</strong>
+                        </span>
+                    @enderror
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('txtNit') }}</label>
+                    <div class="col-md-6">
+                    <input id="txtNit" name="txtNit" placeholder="Ingrese NIT" type="text" class="form-control" @error('txtNit') is-invalid @enderror value="{{old('txtNit')}}" required="required">
+                    @error('txtNit')
+                        <span class="invalid-feedback d-block" role="alert">
+                            <strong>{{ $message }}</strong>
+                        </span>
+                    @enderror
                     </div>
                 </div>
 
